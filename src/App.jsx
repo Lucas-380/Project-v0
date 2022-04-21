@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Layout from "./components/Layout/layout"
 //Pages
 import { Home, About, Services, ContactUs, SignUp } from './pages/index'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
     return(
