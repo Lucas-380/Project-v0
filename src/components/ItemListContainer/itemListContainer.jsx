@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { api } from '../../utils/api'
 import ItemList from "./itemList/itemList";
-
-
-
+import SidebarNav from "../Sidebar/sidebarNav";
 
 const ItemListContainer = ({ greeting }) => {
 
-  const endpoint = '?sort=desc'
+  const endpoint = ''
   const [prod, setProd] = useState([])
 
     useEffect(() => {
@@ -23,18 +21,19 @@ const ItemListContainer = ({ greeting }) => {
         }, 2000);
     }, [endpoint])
 
-    console.log(prod);
 
     return (
         <>
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-lg-2"  style={{backgroundColor: "grey"}}>Sidebar del Navegador</div>
-                    <div className="col-lg-8"  style={{justifyContent:"center"}}>
+                    <div className="col-lg-2 p-1"  style={{backgroundColor: "black"}}>
+                        <SidebarNav/>
+                    </div>
+                    <div className="col-lg-10"  style={{justifyContent:"center"}}>
                         <ItemList
                             prod={prod}/>
                     </div>
-                    <div className="col-lg-2"  style={{backgroundColor: "grey"}}>Todavia nose</div>
+                    {/* <div className="col-lg-2"  style={{backgroundColor: "grey"}}>Todavia nose</div> */}
                 </div>
             </div>
         </>

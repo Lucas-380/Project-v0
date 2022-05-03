@@ -1,5 +1,7 @@
 import React from 'react'
 import './card.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartShopping, faEye} from '@fortawesome/free-solid-svg-icons'
 
 const Card = ({ name, price, img, category }) => {
 
@@ -23,24 +25,20 @@ const Card = ({ name, price, img, category }) => {
                 <img src={img} alt={name} />
             </div>
             <div className="card-body">
-            {/* <span className="tag tag-teal">{category}</span> */}
-            {tagColor()}
-            <h4>
-                {name}
-            </h4>
-            <div className="user">
-                <h2>L</h2>
-                <div className="user-info">
-                    <h5>$ {price}</h5>
-                    <small>Carrito</small>
+                {tagColor()}
+                <p>
+                    {name}
+                </p>
+                <div className="usuario">
+                    <div className='logo'></div>
+                    <div className="user-info">
+                        <h5>$ {price}</h5>
+                    </div>
+                    <div className='icons'>
+                        <FontAwesomeIcon className='icon-eye' icon={faEye} />
+                        <FontAwesomeIcon className='icon-cart' icon={faCartShopping} />
+                    </div>
                 </div>
-            
-            <div>
-                <button className='btn btn-success button'>Ver mas...</button>
-            </div>
-            
-            </div>
-
             </div>
         </div>
 

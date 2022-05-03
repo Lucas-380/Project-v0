@@ -9,7 +9,7 @@
   margin: 10px;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 20px #6610f2;
   overflow: hidden;
   width: 300px;
 }
@@ -28,14 +28,17 @@
   justify-content: center;
   align-items: flex-start;
   padding: 20px;
-  min-height: 250px;
+  min-height: 25px;
+}
+.card-body p{
+  font-size: 16px !important;
 }
 
 .tag {
   background: #cccccc;
   border-radius: 50px;
   font-size: 12px;
-  margin: 0;
+  margin: 0 0 0.5rem 0;
   color: #fff;
   padding: 2px 10px;
   text-transform: uppercase;
@@ -55,27 +58,52 @@
   font-size: 13px;
   margin: 0 0 40px;
 }
-.user {
+.usuario {
   display: flex;
   margin-top: auto;
 }
 
-.user h2 {
+.usuario .logo {
   text-align: center;
-  border-radius: 50%;
-  width: 40px;
-  background-color: rgba(0, 0, 0, 0.373);
-  height: 40px;
   margin-right: 10px;
-  color: #15cdfc;
+  color: #6610f2;
 }
 .user-info h5 {
-  margin: 0;
+  margin-top: 1rem;
 }
 .user-info small {
   color: #545d7a;
 }
 
-.button{
-    margin-left: 3rem;
+.icons{
+  margin-left: 11rem;
+  position: absolute;
+}
+.icon-cart{
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  background-color: #965cf3;
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: #190040;
+  transition: 0.3s;
+}
+.icon-cart:hover{
+  transition: 0.3s;
+  color: #965cf3;
+  background-color: #190040;
+}
+
+.icon-eye{
+  font-size: 1.5rem;
+  background-color: #965cf3;
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: #190040;
+  transition: 0.3s;
+}
+.icon-eye:hover{
+  transition: 0.3s;
+  color: #965cf3;
+  background-color: #190040;
 }
