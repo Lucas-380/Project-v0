@@ -10,6 +10,7 @@ const ItemList = ({prod}) => {
           {prod && prod.map((prods => 
                     (<Card
                         key={prods.id}
+                        id={prods.id}
                         name={prods.title}
                         price={prods.price}
                         img={prods.image}

@@ -6,7 +6,8 @@ import Layout from "./components/Layout/layout"
 //Pages
 import { Home, About, Services, ContactUs, SignUp } from './pages/index'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Category from './components/Filter/Category/category';
+import Category from './components/Filter/Category/category.jsx';
+import ItemDetaliContainer from './components/ItemDetailContainer/itemDetaliContainer';
 
 function App() {
     return(
@@ -22,6 +23,10 @@ function App() {
                         <Route exact path="/:categoria">
                             <Category/>
                         </Route>
+                        <Route exact path="/:categoria/:id">
+                            <ItemDetaliContainer/>
+                        </Route>
+
                     </Switch>
                 </Layout>
             </Router>

@@ -3,11 +3,8 @@ import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import './header.css'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping, faUser} from '@fortawesome/free-solid-svg-icons'
-
-
 
 
 function Header() {
@@ -23,15 +20,14 @@ function Header() {
                         {/*SOLUCIONAR LA BARRA DE BUSQUEDA Y EL CARRITO PARA QUE SE VEA DENTRO DEL COLLAPSE PERO PEGADO A LA ESQUINA} */}
 
                         <div className="col-lg-9">
-                            <Nav className="me-auto my-2 my-lg-0 col-lg-6 centrado" style={{ maxHeight: "200px"}} navbarScroll>
+                            <Nav className="me-auto my-2 my-lg-0 centrado" style={{ maxHeight: "200px"}} navbarScroll>
                                 <Link  to="/" style={{textDecoration: "none"}} className="styleNav">Inicio</Link>
                                 <Link  to="/" style={{textDecoration: "none"}} className="styleNav">Catalogo</Link>
                                 <Link  to="/" style={{textDecoration: "none"}} className="styleNav">Cuenta</Link>
                             </Nav>
                         </div>
-                            <div className='search-box col-lg-3'>
-                                <input type="text" placeholder="Search..."/>
-                            </div>
+
+
                         
                         </Navbar.Collapse>
                         <div className="mg">

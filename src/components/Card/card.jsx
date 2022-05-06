@@ -2,8 +2,9 @@ import React from 'react'
 import './card.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping, faEye} from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
-const Card = ({ name, price, img, category }) => {
+const Card = ({ name, price, img, category, id }) => {
 
     function tagColor(){
         if (category === "women's clothing") {
@@ -35,8 +36,10 @@ const Card = ({ name, price, img, category }) => {
                         <h5>$ {price}</h5>
                     </div>
                     <div className='icons'>
-                        <FontAwesomeIcon className='icon-eye' icon={faEye} />
-                        <FontAwesomeIcon className='icon-cart' icon={faCartShopping} />
+                        <Link to={`${category}/${id}`}>
+                            <FontAwesomeIcon className='icon-eye' icon={faEye} />
+                        </Link>
+                            <FontAwesomeIcon className='icon-cart' icon={faCartShopping} />
                     </div>
                 </div>
             </div>
